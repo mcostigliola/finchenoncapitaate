@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finché non capita a te</title>
+  <meta name="description" content="Supporto, informazione e iniziative sul territorio. Eventi, teatro sociale, rete e convenzioni." />
+  <link rel="icon" href="assets/img/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #C1121F;
+      --accent-dark: #8A0D14;
+      --accent-soft: #FDE2E4;
+      --radius: 1.25rem;
+    }
+
+    body{ color: var(--text); background: var(--bg); }
+    .rounded-2xl{ border-radius: var(--radius) !important; }
+    .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .object-cover{ object-fit: cover; }
+
+    /* override Bootstrap primary -> rosso */
+    .btn-primary{
+      background-color: var(--accent) !important;
+      border-color: var(--accent) !important;
+    }
+    .btn-primary:hover, .btn-primary:focus{
+      background-color: var(--accent-dark) !important;
+      border-color: var(--accent-dark) !important;
+    }
+
+    a{ color: var(--accent); }
+    a:hover{ color: var(--accent-dark); }
+
+    .text-accent{ color: var(--accent) !important; }
+    .bg-accent-soft{ background-color: var(--accent-soft) !important; }
+    .border-accent{ border-color: rgba(193,18,31,.35) !important; }
+
+    .hero-grad{
+      background:
+        radial-gradient(1200px circle at 10% 10%, rgba(193,18,31,.14), transparent 45%),
+        radial-gradient(900px circle at 90% 20%, rgba(13,110,253,.10), transparent 40%),
+        linear-gradient(#fff, #fff);
+    }
+
+    /* carousel height */
+    .carousel-item img{ height: 420px; }
+    @media (max-width: 991.98px){
+      .carousel-item img{ height: 260px; }
+    }
+
+    /* icon buttons */
+    .icon-btn svg{ width: 18px; height: 18px; }
+
+    /* small badges */
+    .badge-accent{
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      border: 1px solid rgba(193,18,31,.25);
+    }
+
+    /* partner logo tiles */
+    .partner-tile{
+      background: #f8f9fa;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .partner-tile img{ max-height: 44px; width: auto; }
+  </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="#">
+                <img src="assets/img/logo.webp" alt="Finché non capita a te – logo" width="100" height="100" class="rounded-circle">
+                <span>Finché non capita a te</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-lg-1 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#cosa-facciamo">Cosa facciamo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi siamo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#eventi">Eventi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teatro">Teatro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#convenzioni">Convenzioni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+
+        <li class="nav-item ms-lg-2">
+          <a class="btn btn-outline-secondary" href="#sostienici">Sostienici</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="#contatti">Chiedi aiuto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO + CAROUSEL -->
+<header class="hero-grad py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+        <h1 class="display-5 fw-bold lh-1">Quando capita, non devi restare sola.</h1>
+        <p class="lead text-secondary mt-3">
+          Informazione, supporto e iniziative sul territorio. Rete, eventi e teatro sociale contro l’isolamento.
+        </p>
+
+        <div class="d-flex gap-2 flex-wrap mt-3">
+          <a class="btn btn-primary btn-lg" href="#contatti">Chiedi aiuto</a>
+          <a class="btn btn-outline-secondary btn-lg" href="#eventi">Prossimi eventi</a>
+        </div>
+
+        <div class="d-flex gap-2 flex-wrap mt-3">
+          <span class="badge badge-accent">Ascolto</span>
+          <span class="badge badge-accent">Orientamento</span>
+          <span class="badge badge-accent">Rete sul territorio</span>
+        </div>
+
+        <div class="alert bg-accent-soft border-accent rounded-2xl mt-4 mb-0" role="alert">
+          <strong class="text-accent">Se sei in pericolo:</strong>
+          <span class="text-secondary">chiama il 112.</span>
+          <div class="small text-secondary mt-1">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="rounded-2xl shadow-soft overflow-hidden border bg-white">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <!-- Puoi usare immagini locali: assets/img/hero/hero-1.jpg ecc. -->
+              <div class="carousel-item active">
+                <img class="d-block w-100 object-cover"
+                     src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=70"
+                     alt="Ascolto e supporto">
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Ascolto e orientamento</h2>
+                  <p class="d-none d-md-block">Un primo contatto per capire i passi pratici, senza giudizio.</p>
+                  <a class="btn btn-primary btn-sm" href="#contatti">Contattaci</a>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100 object-cover"
+                     src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70"
+                     alt="Progetti e rete">
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Progetti sul territorio</h2>
+                  <p class="d-none d-md-block">Collaborazioni concrete con partner e realtà locali.</p>
+                  <a class="btn btn-outline-light btn-sm" href="#convenzioni">Convenzioni</a>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100 object-cover"
+                     src="https://images.unsplash.com/photo-1520975958221-9a6d7bba3b7a?auto=format&fit=crop&w=1600&q=70"
+                     alt="Teatro sociale">
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Teatro sociale</h2>
+                  <p class="d-none d-md-block">Laboratori ed eventi per creare comunità e consapevolezza.</p>
+                  <a class="btn btn-primary btn-sm" href="#teatro">Scopri</a>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Precedente</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- COSA FACCIAMO -->
+<section id="chi-siamo" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-1">Cosa facciamo</h2>
+        <p class="text-secondary mb-0">Percorsi semplici: contatto → orientamento → rete → iniziative.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="btn btn-outline-secondary" href="#contatti">Parliamone</a>
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl shadow-soft border-0">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge text-bg-light border"><span class="text-accent fw-semibold">1</span></span>
+              <span class="fw-semibold">Ascolto e orientamento</span>
+            </div>
+            <p class="text-secondary mb-3">
+              Primo contatto, raccolta del bisogno, indicazioni pratiche e riferimenti utili.
+            </p>
+            <a class="btn btn-sm btn-outline-secondary" href="#contatti">Scrivici</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl shadow-soft border-0">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge text-bg-light border"><span class="text-accent fw-semibold">2</span></span>
+              <span class="fw-semibold">Progetti e rete</span>
+            </div>
+            <p class="text-secondary mb-3">
+              Collaboriamo con enti e partner per creare percorsi concreti sul territorio.
+            </p>
+            <a class="btn btn-sm btn-outline-secondary" href="#convenzioni">Partner</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl shadow-soft border-0">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge text-bg-light border"><span class="text-accent fw-semibold">3</span></span>
+              <span class="fw-semibold">Cultura e teatro sociale</span>
+            </div>
+            <p class="text-secondary mb-3">
+              Eventi e laboratori per creare consapevolezza e comunità.
+            </p>
+            <a class="btn btn-sm btn-outline-secondary" href="#teatro">Scopri</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+ <section id="teatro" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-2">Chi siamo</h2>
+        <p class="text-secondary">
+          Ci siamo resi conto che occorre lavorare per combattere la battaglia più impegnativa: fare emergere situazioni di violenza, abusi, discriminazioni, assicurando il supporto, la vicinanza e l’orientamento necessari a persone che vorrebbero denunciare ma non agiscono per la paura di ritorsioni contro loro stesse o contro i propri familiari, figli, amici, ecc.
+        </p>
+        
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-primary" href="chi-siamo.html">Continua a leggere</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 rounded-2xl shadow-soft bg-white border p-2 d-flex align-items-center justify-content-center overflow-hidden photo-frame mt-3">
+            <img class="img-fluid object-fit-contain rounded-2xl w-100 h-100" src="assets/img/francesco.webp" alt="Presidente Dott. Francesco Borrelli">        
+        </div>
+        <div class="ratio ratio-16x9 rounded-2xl shadow-soft bg-white border p-2 d-flex align-items-center justify-content-center overflow-hidden photo-frame mt-3">
+            <img class="img-fluid object-fit-contain rounded-2xl w-100 h-100" src="assets/img/francesca.webp" alt="Vice Presidente Dott.ssa Francesca Calaminici">        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTI -->
+<section id="eventi" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <h2 class="fw-bold mb-1">Prossimi eventi</h2>
+        <p class="text-secondary mb-0">Titolo + data + luogo. Chiaro, leggibile, mobile-first.</p>
+      </div>
+      <a class="btn btn-outline-secondary" href="#">Vedi tutti</a>
+    </div>
+
+    <div class="row g-3">
+      <!-- EVENTO 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl border-0 shadow-soft">
+          <div class="ratio ratio-16x9">
+            <img class="w-100 h-100 object-cover rounded-top-2xl"
+                 src="https://images.unsplash.com/photo-1515162305284-9d8a38a49f74?auto=format&fit=crop&w=1200&q=70"
+                 alt="Evento 1">
+          </div>
+          <div class="card-body p-4">
+            <div class="small text-secondary">Sab 10 • 18:00 • Napoli</div>
+            <h3 class="h6 fw-semibold mt-1">Incontro pubblico: riconoscere i segnali</h3>
+            <p class="text-secondary mb-3">Un momento informativo, pratico e accessibile a tutti.</p>
+            <a class="btn btn-sm btn-primary" href="#">Dettagli</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl border-0 shadow-soft">
+          <div class="ratio ratio-16x9">
+            <img class="w-100 h-100 object-cover rounded-top-2xl"
+                 src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=70"
+                 alt="Evento 2">
+          </div>
+          <div class="card-body p-4">
+            <div class="small text-secondary">Dom 18 • 17:30 • Pozzuoli</div>
+            <h3 class="h6 fw-semibold mt-1">Laboratorio: rete e autodifesa emotiva</h3>
+            <p class="text-secondary mb-3">Percorso guidato. Posti limitati (prenotazione consigliata).</p>
+            <a class="btn btn-sm btn-primary" href="#">Dettagli</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 rounded-2xl border-0 shadow-soft">
+          <div class="ratio ratio-16x9">
+            <img class="w-100 h-100 object-cover rounded-top-2xl"
+                 src="https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&w=1200&q=70"
+                 alt="Evento 3">
+          </div>
+          <div class="card-body p-4">
+            <div class="small text-secondary">Ven 23 • 20:30 • Caserta</div>
+            <h3 class="h6 fw-semibold mt-1">Spettacolo + talk: la parola alle donne</h3>
+            <p class="text-secondary mb-3">Teatro sociale e confronto con ospiti sul territorio.</p>
+            <a class="btn btn-sm btn-primary" href="#">Dettagli</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEATRO -->
+<section id="teatro" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-2">Teatro sociale</h2>
+        <p class="text-secondary">
+          Uno spazio guidato per relazione, ascolto, rielaborazione. Non “spettacolo”: percorso.
+        </p>
+        <ul class="text-secondary">
+          <li><strong>Per chi:</strong> donne, familiari, comunità (adatta ai tuoi target)</li>
+          <li><strong>Dove:</strong> (sede / città)</li>
+          <li><strong>Come partecipare:</strong> iscrizione e colloquio conoscitivo</li>
+        </ul>
+
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-primary" href="#contatti">Iscriviti</a>
+          <a class="btn btn-outline-secondary" href="#video">Guarda i video</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 rounded-2xl overflow-hidden shadow-soft">
+          <img class="w-100 h-100 object-cover"
+               src="https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0d?auto=format&fit=crop&w=1200&q=70"
+               alt="Teatro e laboratorio">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <h2 class="fw-bold mb-1">Video</h2>
+        <p class="text-secondary mb-0">2 video brevi in home: impatto alto, distrazione bassa.</p>
+      </div>
+      <a class="btn btn-outline-secondary" href="#">Canale</a>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <div class="rounded-2xl overflow-hidden shadow-soft border bg-white">
+          <div class="ratio ratio-16x9">
+            <!-- Sostituisci con il tuo embed (YouTube/Vimeo). Usa youtube-nocookie. -->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xx2Vs34nWgQ?si=T0ZiQsxPNr86uVNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-3">
+            <div class="fw-semibold">Chi siamo (60s)</div>
+            <div class="small text-secondary">Un’introduzione rapida e chiara.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="rounded-2xl overflow-hidden shadow-soft border bg-white">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/luOLqmgMSiU?si=7iyg4jR-5AX3KkTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-3">
+            <div class="fw-semibold">Un progetto sul territorio (45s)</div>
+            <div class="small text-secondary">Rete, azioni, risultati concreti.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="rounded-2xl overflow-hidden shadow-soft border bg-white">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pyxvFL15VdE?si=tTxdhbeAs6T7zNWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="p-3">
+            <div class="fw-semibold">Un progetto sul territorio (45s)</div>
+            <div class="small text-secondary">Rete, azioni, risultati concreti.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert bg-white border rounded-2xl mt-4 mb-0">
+      <strong class="text-accent">Nota:</strong>
+      <span class="text-secondary">se i video rallentano, tieni un solo embed in home e sposta gli altri su una pagina “Media”.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONVENZIONI -->
+<section id="convenzioni" class="py-5">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-1">Convenzioni e partner</h2>
+        <p class="text-secondary mb-0">Griglia pulita di loghi. Un click = una scheda o un link.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="btn btn-outline-secondary" href="#contatti">Diventa partner</a>
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <!-- Sostituisci questi placeholder con loghi reali (meglio SVG) -->
+      <div class="col-6 col-md-3">
+        <a class="text-decoration-none" href="#">
+          <div class="partner-tile">
+            <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+1" alt="Partner 1">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a class="text-decoration-none" href="#">
+          <div class="partner-tile">
+            <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+2" alt="Partner 2">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a class="text-decoration-none" href="#">
+          <div class="partner-tile">
+            <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+3" alt="Partner 3">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a class="text-decoration-none" href="#">
+          <div class="partner-tile">
+            <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+4" alt="Partner 4">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOSTIENICI -->
+<section id="sostienici" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+      <div class="col-lg-7">
+        <div class="p-4 bg-white rounded-2xl shadow-soft border h-100">
+          <h2 class="fw-bold mb-2">Sostienici</h2>
+          <p class="text-secondary mb-3">
+            Un contributo mantiene attivi ascolto, attività e iniziative. Trasparente, semplice, senza fronzoli.
+          </p>
+
+          <div class="border rounded-3 p-3 bg-accent-soft border-accent">
+            <div class="small text-secondary">IBAN</div>
+            <div class="fw-semibold" id="ibanText">IT00 X000 0000 0000 0000 0000 000</div>
+            <div class="small text-secondary mt-2">Causale: Donazione – Finché non capita a te</div>
+          </div>
+
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <button class="btn btn-primary" type="button" id="copyIbanBtn">Copia IBAN</button>
+            <a class="btn btn-outline-secondary" href="#contatti">Diventa volontario</a>
+          </div>
+
+          <div class="small text-secondary mt-3">
+            (Opzionale) 5x1000: CF <strong>XXXXXXXXXXX</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="py-5">
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+
+      <!-- FORM -->
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded-2xl shadow-soft border h-100">
+          <h2 class="h4 fw-bold mb-2">Contatti</h2>
+          <p class="text-secondary">Scrivici: ti rispondiamo appena possibile.</p>
+
+          <form class="row g-2" action="#" method="post">
+            <div class="col-12">
+              <label class="form-label small text-secondary" for="name">Nome</label>
+              <input id="name" class="form-control" placeholder="Il tuo nome" required>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small text-secondary" for="email">Email</label>
+              <input id="email" type="email" class="form-control" placeholder="nome@email.it" required>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small text-secondary" for="msg">Messaggio</label>
+              <textarea id="msg" class="form-control" rows="4" placeholder="Di cosa hai bisogno?" required></textarea>
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary w-100" type="submit">Invia</button>
+            </div>
+
+            <div class="col-12 small text-secondary">
+              Se sei in pericolo, chiama il 112.
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- MAPPA -->
+      <div class="col-lg-7">
+        <div class="p-3 bg-white rounded-2xl shadow-soft border h-100">
+          <h3 class="h6 fw-semibold mb-2">Dove ci troviamo</h3>
+
+          <div class="ratio ratio-16x9 rounded-2xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=Bolognapiazzasanmartino9&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="border:0;"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="small text-secondary mt-2">
+            Bologna 40126, Piazza San Martino,9
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-5 border-top">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="fw-semibold">Finché non capita a te</div>
+        <div class="text-secondary small mt-2">
+          Sede: … • Email: … • CF: …<br>
+          © <span id="year"></span>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="fw-semibold">Link</div>
+        <ul class="list-unstyled small mt-2 mb-0">
+          <li><a class="text-decoration-none" href="#eventi">Eventi</a></li>
+          <li><a class="text-decoration-none" href="#teatro">Teatro</a></li>
+          <li><a class="text-decoration-none" href="#convenzioni">Convenzioni</a></li>
+          <li><a class="text-decoration-none" href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="fw-semibold">Social</div>
+        <div class="d-flex gap-2 mt-2 flex-wrap">
+          <!-- Sostituisci href con i tuoi link reali -->
+          <a class="btn btn-outline-secondary icon-btn" href="https://www.instagram.com/finchenoncapitaate_/" target="_blank" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <path d="M16 11.37a4 4 0 1 1-7.88 1.26A4 4 0 0 1 16 11.37z"></path>
+              <path d="M17.5 6.5h.01"></path>
+            </svg>
+          </a>
+
+          <a class="btn btn-outline-secondary icon-btn" href="https://www.facebook.com/finchenoncapitate/" target="_blank" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+
+          <a class="btn btn-outline-secondary icon-btn" href="https://www.youtube.com/@sappeemiliaromagnasegreter6756" target="_blank" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
+              <path d="M10 15l5-3-5-3z"></path>
+            </svg>
+          </a>
+
+          <a class="btn btn-outline-secondary icon-btn" href="mailto:info@esempio.it" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="M22 6l-10 7L2 6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="small text-secondary mt-3">
+          <a class="text-decoration-none" href="privacy.html">Privacy</a> •
+          <a class="text-decoration-none" href="cookie.html">Cookie</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Copia IBAN
+  const copyBtn = document.getElementById('copyIbanBtn');
+  const ibanText = document.getElementById('ibanText');
+
+  copyBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText((ibanText.textContent || '').trim());
+      const old = copyBtn.textContent;
+      copyBtn.textContent = "Copiato!";
+      setTimeout(() => copyBtn.textContent = old, 1500);
+    } catch (e) {
+      alert("Copia non disponibile: seleziona l'IBAN e copia manualmente.");
+    }
+  });
+</script>
+
+</body>
+</html>
