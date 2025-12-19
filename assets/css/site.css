@@ -60,6 +60,10 @@ a:hover{ color: var(--accent-dark); }
 .nav-link{ color: var(--blue-dark); }
 .nav-link:hover,
 .nav-link:focus{ color: var(--accent); }
+.navbar .container{
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
 
 .text-accent{ color: var(--accent) !important; }
 .bg-accent-soft{ background-color: var(--accent-soft) !important; }

@@ -77,3 +77,21 @@
 
   showBannerIfNeeded();
 })();
+
+(() => {
+  const navCollapse = document.getElementById('nav');
+  if (!navCollapse || !window.bootstrap?.Collapse) return;
+  const navbar = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+  const onScroll = () => {
+    if (navCollapse.classList.contains('show')) {
+      navbar.hide();
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  navCollapse.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target && target.closest('a')) {
+      navbar.hide();
+    }
+  });
+})();
