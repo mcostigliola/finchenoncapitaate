@@ -82,12 +82,15 @@
   const navCollapse = document.getElementById('nav');
   if (!navCollapse || !window.bootstrap?.Collapse) return;
   const navbar = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
-  const onScroll = () => {
+  const closeIfOpen = () => {
     if (navCollapse.classList.contains('show')) {
       navbar.hide();
     }
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', closeIfOpen, { passive: true });
+  window.addEventListener('wheel', closeIfOpen, { passive: true });
+  window.addEventListener('touchmove', closeIfOpen, { passive: true });
+  navCollapse.addEventListener('scroll', closeIfOpen, { passive: true });
   navCollapse.addEventListener('click', (event) => {
     const target = event.target;
     if (target && target.closest('a')) {
