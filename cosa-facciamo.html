@@ -11,19 +11,40 @@
 
   <style>
     :root{
-      --accent: #C1121F;
-      --accent-dark: #8A0D14;
-      --accent-soft: #FDE2E4;
-      --border: #e5e7eb;
+      --bg: #f6fbff;
+      --bg-alt: #eaf4ff;
+      --surface: #ffffff;
+      --surface-alt: #f0f7ff;
+      --text: #0f172a;
+      --muted: #526072;
+      --border: #d7e5f3;
+      --accent: #c1121f;
+      --accent-dark: #8a0d14;
+      --accent-soft: #fde9ec;
+      --blue: #2f6ea8;
+      --blue-dark: #1e4d79;
+      --blue-soft: #dbeeff;
       --radius: 1.25rem;
     }
-    body{ color:#111827; background:#fff; }
-    a{ color:var(--accent); }
-    a:hover{ color:var(--accent-dark); }
+    body{ color: var(--text); background: var(--bg); }
+    a{ color: var(--accent); }
+    a:hover{ color: var(--accent-dark); }
 
     .rounded-2xl{ border-radius: var(--radius) !important; }
     .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08); }
     .object-cover{ object-fit: cover; }
+
+    .text-secondary{ color: var(--muted) !important; }
+    .bg-light{ background-color: var(--bg-alt) !important; }
+    .bg-white{ background-color: var(--surface) !important; }
+    .border{ border-color: var(--border) !important; }
+    .border-top{ border-color: var(--border) !important; }
+    .border-bottom{ border-color: var(--border) !important; }
+    .text-bg-light{
+      background-color: var(--blue-soft) !important;
+      color: var(--blue-dark) !important;
+      border: 1px solid var(--border) !important;
+    }
 
     .btn-primary{
       background-color: var(--accent) !important;
@@ -33,9 +54,21 @@
       background-color: var(--accent-dark) !important;
       border-color: var(--accent-dark) !important;
     }
+    .btn-outline-secondary{
+      color: var(--blue) !important;
+      border-color: var(--blue) !important;
+    }
+    .btn-outline-secondary:hover,
+    .btn-outline-secondary:focus{
+      background-color: var(--blue) !important;
+      border-color: var(--blue) !important;
+      color: #ffffff !important;
+    }
 
     .bg-accent-soft{ background-color: var(--accent-soft) !important; }
-    .border-accent{ border-color: rgba(193,18,31,.35) !important; }
+    .border-accent{ border-color: rgba(193,18,31,.45) !important; }
+    .nav-link{ color: var(--blue-dark); }
+    .nav-link:hover, .nav-link:focus{ color: var(--accent); }
 
     /* leggero "paper" look per il blocco testo */
     .prose{
