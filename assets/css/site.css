@@ -91,6 +91,8 @@ a:hover{ color: var(--accent-dark); }
 .text-accent{ color: var(--accent) !important; }
 .bg-accent-soft{ background-color: var(--accent-soft) !important; }
 .border-accent{ border-color: rgba(193,18,31,.45) !important; }
+.footer-credit{ font-size: .8rem; }
+.footer-credit .heart{ color: var(--accent); }
 
 .hero-grad{
   background:
@@ -113,16 +115,43 @@ a:hover{ color: var(--accent-dark); }
 }
 
 .partner-tile{
-  background: var(--surface-alt);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem;
-  height: 100%;
+  padding: 1.35rem;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-.partner-tile img{ max-height: 44px; width: auto; }
+.partner-link{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+.partner-tile img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.55);
+}
+.partner-tile .partner-logo-full{
+  filter: none;
+  background: #ffffff;
+  transform: none;
+}
+.partner-logo-zoom{
+  transform: scale(1.08);
+  transform-origin: center;
+}
+.partner-logo-gray{
+  filter: grayscale(100%);
+}
 
 .photo-frame{
   max-width: 380px;

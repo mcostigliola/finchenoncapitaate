@@ -665,35 +665,34 @@
           </div>
 
           <div class="row g-3">
-            <!-- Sostituisci questi placeholder con loghi reali (meglio SVG) -->
             <div class="col-6 col-md-3">
-              <a class="text-decoration-none" href="#">
+              <button class="partner-link" type="button" data-bs-toggle="modal" data-bs-target="#convenzioneModalDirittoPiu" aria-label="Apri convenzione DirittoPiu">
                 <div class="partner-tile">
-                  <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+1" alt="Partner 1"/>
+                  <img src="/assets/img/convenzioni/dirittopiu.png" alt="Partner 1"/>
                 </div>
-              </a>
+              </button>
             </div>
             <div class="col-6 col-md-3">
-              <a class="text-decoration-none" href="#">
+              <button class="partner-link" type="button" data-bs-toggle="modal" data-bs-target="#convenzioneModalLacasaMiki" aria-label="Apri convenzione La Casa Miki">
                 <div class="partner-tile">
-                  <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+2" alt="Partner 2"/>
+                  <img class="partner-logo-full partner-logo-zoom partner-logo-gray" src="/assets/img/convenzioni/lacasa-miki.png" alt="Partner 2"/>
                 </div>
-              </a>
+              </button>
             </div>
             <div class="col-6 col-md-3">
-              <a class="text-decoration-none" href="#">
+              <button class="partner-link" type="button" data-bs-toggle="modal" data-bs-target="#convenzioneModalPartner3" aria-label="Apri convenzione Partner 3">
                 <div class="partner-tile">
-                  <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+3" alt="Partner 3"/>
+                  <img class="partner-logo-full partner-logo-zoom partner-logo-gray" src="/assets/img/convenzioni/studiolegale.png" alt="Partner 3"/>
                 </div>
-              </a>
+              </button>
             </div>
-            <div class="col-6 col-md-3">
-              <a class="text-decoration-none" href="#">
+            <!--<div class="col-6 col-md-3">
+              <button class="partner-link" type="button" data-bs-toggle="modal" data-bs-target="#convenzioneModalPartner4" aria-label="Apri convenzione Partner 4">
                 <div class="partner-tile">
                   <img src="https://dummyimage.com/240x80/ffffff/6c757d&text=Partner+4" alt="Partner 4"/>
                 </div>
-              </a>
-            </div>
+              </button>
+            </div>-->
           </div>
         </div>
       </section>
@@ -730,9 +729,8 @@
                   <a class="btn btn-outline-secondary" href="iscrizione.html">Iscriviti alla causa</a>
                 </div>
 
-                <!--<div class="small text-secondary mt-3">
-            5x1000: CF <strong>91441660379</strong>
-          </div>-->
+                <div class="small text-secondary mt-3">5x1000: CF <strong>91441660379</strong>
+                </div>
               </div>
             </div>
           </div>
@@ -873,6 +871,9 @@
               </div>
             </div>
           </div>
+          <div class="text-center small text-secondary mt-3 footer-credit">
+            developed by <a class="text-decoration-none" href="https://www.instagram.com/_______mar_cos/" target="_blank" rel="noopener">Marco Costigliola</a> <span class="heart">❤</span>
+          </div>
         </div>
       </footer>
 
@@ -914,6 +915,58 @@
             <button class="btn btn-outline-secondary btn-sm ms-auto" id="cookieSavePrefs" type="button" hidden>
               Salva preferenze
             </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="convenzioneModalDirittoPiu" tabindex="-1" aria-labelledby="convenzioneModalLabelDirittoPiu" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="convenzioneModalLabelDirittoPiu">Convenzione DirittoPiu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body p-0">
+              <img src="assets/img/convenzioni/dirittopiu-convenzione.jpg" alt="Dettagli convenzione DirittoPiu" class="img-fluid w-100"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="convenzioneModalLacasaMiki" tabindex="-1" aria-labelledby="convenzioneModalLabelLacasaMiki" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="convenzioneModalLabelLacasaMiki">Convenzione La Casa di Miki</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body p-0">
+              <img src="assets/img/convenzioni/lacasadimiki.jpg" alt="Dettagli convenzione La Casa di Miki" class="img-fluid w-100"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="convenzioneModalPartner3" tabindex="-1" aria-labelledby="convenzioneModalLabelPartner3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="convenzioneModalLabelPartner3">Convenzione Partner 3</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body p-0">
+              <img src="assets/img/convenzioni/studiolegalebologna.jpg" alt="Dettagli convenzione Partner 3" class="img-fluid w-100"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="convenzioneModalPartner4" tabindex="-1" aria-labelledby="convenzioneModalLabelPartner4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="convenzioneModalLabelPartner4">Convenzione Partner 4</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body p-0">
+              <img src="assets/img/convenzioni/lacasa-miki.png" alt="Dettagli convenzione Partner 4" class="img-fluid w-100"/>
+            </div>
           </div>
         </div>
       </div>
