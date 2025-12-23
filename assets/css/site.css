@@ -16,6 +16,11 @@
 }
 
 body{ color: var(--text); background: var(--bg); }
+html,
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 a{ color: var(--accent); }
 a:hover{ color: var(--accent-dark); }
 
@@ -63,6 +68,20 @@ a:hover{ color: var(--accent-dark); }
 .navbar .container{
   padding-top: .2rem;
   padding-bottom: .2rem;
+}
+@media (max-width: 991.98px){
+  .navbar .container{
+    position: relative;
+    padding-right: 3rem;
+  }
+  .navbar-brand{
+    align-items: flex-start;
+  }
+  .navbar-toggler{
+    position: absolute;
+    top: .55rem;
+    right: .75rem;
+  }
 }
 
 .text-accent{ color: var(--accent) !important; }
