@@ -77,10 +77,14 @@ a:hover{ color: var(--accent-dark); }
   .navbar-brand{
     align-items: flex-start;
   }
+  .navbar-brand span{
+    font-size: .95rem;
+  }
   .navbar-toggler{
     position: absolute;
-    top: .55rem;
+    top: 50%;
     right: .75rem;
+    transform: translateY(-50%);
   }
 }
 
