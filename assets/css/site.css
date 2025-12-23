@@ -75,10 +75,10 @@ a:hover{ color: var(--accent-dark); }
     padding-right: 3rem;
   }
   .navbar-brand{
-    align-items: flex-start;
+    align-items: center;
   }
   .navbar-brand span{
-    font-size: .95rem;
+    font-size: .9rem;
   }
   .navbar-toggler{
     position: absolute;
