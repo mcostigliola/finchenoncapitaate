@@ -98,3 +98,39 @@
     }
   });
 })();
+
+(() => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  const targets = Array.from(document.querySelectorAll('section .container'));
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+
+  targets.forEach((el, index) => {
+    el.classList.add('reveal', index % 2 === 0 ? 'reveal-left' : 'reveal-right');
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  targets.forEach((el) => observer.observe(el));
+})();
+
+(() => {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 2000;
+  const finish = () => {
+    document.body.classList.add('is-loaded');
+    document.body.classList.remove('is-loading');
+    setTimeout(() => preloader.remove(), 500);
+  };
+  window.addEventListener('load', () => {
+    setTimeout(finish, delay);
+  });
+})();

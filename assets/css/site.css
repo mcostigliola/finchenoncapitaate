@@ -145,3 +145,58 @@ a:hover{ color: var(--accent-dark); }
   line-height: 1.75;
   font-size: 1.02rem;
 }
+
+.preloader{
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  perspective: 900px;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+.preloader img{
+  width: min(26vw, 140px);
+  height: auto;
+  animation: preloader-spin 1.4s linear infinite;
+}
+.page-content{
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+body.is-loading .page-content{
+  opacity: 0;
+}
+body.is-loaded .preloader{
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes preloader-spin{
+  from{ transform: rotateY(0deg); }
+  to{ transform: rotateY(360deg); }
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal-left{ transform: translateX(-48px); }
+.reveal-right{ transform: translateX(48px); }
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal,
+  .reveal-left,
+  .reveal-right{
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
