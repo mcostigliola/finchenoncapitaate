@@ -124,7 +124,7 @@
 (() => {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
-  const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 2000;
+  const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500;
   const finish = () => {
     document.body.classList.add('is-loaded');
     document.body.classList.remove('is-loading');
