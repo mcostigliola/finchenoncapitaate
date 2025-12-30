@@ -158,6 +158,13 @@ a:hover{ color: var(--accent-dark); }
 .footer-credit{ font-size: .8rem; }
 .footer-credit .heart{ color: var(--accent); }
 
+#ibanText{
+  font-size: clamp(1.1rem, 3.4vw, 1.6rem);
+  line-height: 1.35;
+  letter-spacing: .02em;
+  overflow-wrap: anywhere;
+}
+
 .hero-grad{
   background:
     radial-gradient(1200px circle at 12% 10%, rgba(193,18,31,.14), transparent 45%),
