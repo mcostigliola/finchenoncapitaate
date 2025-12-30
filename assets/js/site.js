@@ -81,6 +81,7 @@
 (() => {
   const navCollapse = document.getElementById('nav');
   if (!navCollapse || !window.bootstrap?.Collapse) return;
+  if (!document.body.classList.contains('page-sticky')) return;
   const navbar = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
   const closeIfOpen = () => {
     if (navCollapse.classList.contains('show')) {
@@ -93,7 +94,13 @@
   navCollapse.addEventListener('scroll', closeIfOpen, { passive: true });
   navCollapse.addEventListener('click', (event) => {
     const target = event.target;
-    if (target && target.closest('a')) {
+    if (!target) return;
+    if (target.closest('.dropdown-toggle')) return;
+    if (target.closest('.dropdown-item')) {
+      navbar.hide();
+      return;
+    }
+    if (target.closest('a')) {
       navbar.hide();
     }
   });
@@ -133,4 +140,15 @@
   window.addEventListener('load', () => {
     setTimeout(finish, delay);
   });
+})();
+
+(() => {
+  const navbar = document.querySelector('.site-navbar');
+  if (!navbar) return;
+  if (!document.body.classList.contains('page-sticky')) return;
+  const toggle = () => {
+    navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+  };
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
 })();

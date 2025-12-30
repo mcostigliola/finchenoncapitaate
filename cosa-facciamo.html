@@ -30,9 +30,11 @@
     <link rel="stylesheet" href="assets/css/site.css"/>
   </head>
 
-  <body>
+  <body class="page-sticky">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+
+
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top site-navbar">
       <div class="container py-2">
         <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="index.html">
           <img src="assets/img/logo.webp" alt="Finché non capita a te – logo" width="100" height="100" class="rounded-circle"/>
@@ -41,38 +43,24 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto gap-lg-1 align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" aria-label="Home" title="Home">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M3 10.5L12 3l9 7.5"></path>
-                  <path d="M5 9.5V21h14V9.5"></path>
-                  <path d="M9 21v-6h6v6"></path>
-                </svg>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html#cosa-facciamo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cosa facciamo
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cosa facciamo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html#eventi">Eventi</a></li>
+                <li><a class="dropdown-item" href="index.html#teatro">Teatro</a></li>
+                <li><a class="dropdown-item" href="index.html#convenzioni">Convenzioni</a></li>
+                <li><a class="dropdown-item" href="index.html#video">Video</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#chi-siamo">Chi siamo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#eventi">Eventi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#teatro">Teatro</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="news.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#convenzioni">Convenzioni</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#video">Video</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#contatti">Contatti</a>
@@ -80,7 +68,6 @@
             <li class="nav-item">
               <a class="nav-link" href="diventa-volontario.html">Volontari</a>
             </li>
-
             <li class="nav-item ms-lg-2">
               <a class="btn btn-outline-secondary" href="index.html#sostienici">Sostienici</a>
             </li>
