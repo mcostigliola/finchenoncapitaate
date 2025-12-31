@@ -16,7 +16,6 @@ function render_page(int $status_code, string $title, string $message, bool $suc
   $safe_title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
   $safe_message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
   $page_title = $safe_title . ' | Finché non capita a te';
-  $modal_title = $success ? 'Messaggio inviato' : 'Invio non riuscito';
   $badge_class = $success ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger';
   $badge_text = $success ? 'OK' : 'KO';
   $cta_href = 'index.html#contatti';
@@ -105,34 +104,10 @@ function render_page(int $status_code, string $title, string $message, bool $suc
         </div>
       </main>
 
-      <div class="modal fade" id="sendStatusModal" tabindex="-1" aria-labelledby="sendStatusTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="sendStatusTitle">{$modal_title}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-            </div>
-            <div class="modal-body">
-              <p class="mb-0">{$safe_message}</p>
-            </div>
-            <div class="modal-footer">
-              <a class="btn btn-primary" href="{$cta_href}">Ok</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/site.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const modalEl = document.getElementById('sendStatusModal');
-        if (!modalEl || !window.bootstrap) return;
-        const modal = new bootstrap.Modal(modalEl, { backdrop: 'static', keyboard: false });
-        modal.show();
-      });
-    </script>
   </body>
 </html>
 HTML;
