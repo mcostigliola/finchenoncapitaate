@@ -143,6 +143,61 @@
 })();
 
 (() => {
+  const form = document.getElementById('contactForm');
+  const modalEl = document.getElementById('contactStatusModal');
+  if (!form || !modalEl || !window.bootstrap?.Modal) return;
+
+  const titleEl = document.getElementById('contactStatusTitle');
+  const messageEl = document.getElementById('contactStatusMessage');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn?.textContent || 'Invia';
+  const modal = new bootstrap.Modal(modalEl, { backdrop: 'static', keyboard: false });
+
+  const showStatus = (title, message) => {
+    if (titleEl) titleEl.textContent = title;
+    if (messageEl) messageEl.textContent = message;
+    modal.show();
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Invio in corso...';
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+
+      const payload = await response.json().catch(() => null);
+      if (response.ok && payload?.success) {
+        form.reset();
+        showStatus(
+          'Messaggio inviato',
+          payload?.message || 'Il messaggio e stato correttamente inviato. Ti risponderemo al piu presto.'
+        );
+      } else {
+        showStatus(
+          'Invio non riuscito',
+          payload?.message || 'Si e verificato un problema durante l\'invio. Riprova piu tardi.'
+        );
+      }
+    } catch (error) {
+      showStatus('Invio non riuscito', 'Si e verificato un errore di rete. Riprova piu tardi.');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitLabel;
+      }
+    }
+  });
+})();
+
+(() => {
   const navbar = document.querySelector('.site-navbar');
   if (!navbar) return;
   if (!document.body.classList.contains('page-sticky')) return;

@@ -854,7 +854,7 @@
                   Scrivici: ti rispondiamo appena possibile.
                 </p>
 
-                <form class="row g-2" action="send.php" method="post" aria-describedby="formEmergency">
+                <form class="row g-2" id="contactForm" action="send.php" method="post" aria-describedby="formEmergency">
                   <div class="col-12">
                     <label class="form-label small text-secondary" for="name">Nome</label>
                     <input id="name" name="name" type="text" class="form-control" placeholder="Il tuo nome" required autocomplete="name" aria-describedby="nameHelp"/>
@@ -1032,6 +1032,22 @@
             <button class="btn btn-outline-secondary btn-sm ms-auto" id="cookieSavePrefs" type="button" hidden>
               Salva preferenze
             </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="contactStatusModal" tabindex="-1" aria-labelledby="contactStatusTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactStatusTitle">Messaggio inviato</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-0" id="contactStatusMessage">Il messaggio e stato correttamente inviato. Ti risponderemo al piu presto.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+            </div>
           </div>
         </div>
       </div>
